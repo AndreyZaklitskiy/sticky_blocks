@@ -17,12 +17,14 @@ let sticky = document.querySelectorAll('.sticky-block'),
   window.addEventListener('scroll', function() {
     // console.log(arrCoords[i]);
     //i>0 &&
-   if ( arrCoords[i] <= ( window.pageYOffset + stickyHeights) ) {
+   if ( arrCoords[i] <= ( window.pageYOffset + stickyHeights - arrHeights[0]) ) {
     sticky[i].classList.add('sticky');
-    sticky[i].style.top = stickyHeights + 'px';
+    sticky[i].style.top = stickyHeights - arrHeights[0] + 'px';
 
 
 
+  }else if ( arrCoords[i] >= ( window.pageYOffset + stickyHeights - arrHeights[0]) ) {
+    sticky[i].classList.remove('sticky');
   }
   });
  };
