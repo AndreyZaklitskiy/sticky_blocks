@@ -34,7 +34,7 @@
     z-index: 2;
 }
 .sticky-block-2 {
-    /* height: 300px; */
+    height: 220px; 
 }
 .sticky {
     position: fixed;
